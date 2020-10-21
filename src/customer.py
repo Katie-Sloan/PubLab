@@ -4,3 +4,5 @@ class Customer:
         self.customer_wallet = import_customer_wallet
         self.customer_age = import_customer_age
     
+    def buy_drink(self, drink):
+        self.customer_wallet -= drink.price
