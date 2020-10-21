@@ -9,3 +9,9 @@ class TestPub(unittest.TestCase):
     def test_pub_has_name(self):
         self.assertEqual('The Prancing Pony', self.pub.name)
 
+
+    def test_pub_has_till_float(self):
+        self.assertEqual(100.00, self.pub.till)
+
+    def test_pub_has_drinks(self):
+        self.assertEqual(0 , len(self.pub.inventory))
