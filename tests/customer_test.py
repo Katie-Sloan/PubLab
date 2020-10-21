@@ -10,22 +10,22 @@ class TestCustomer(unittest.TestCase):
 
 
     def test_customer_has_name(self):
-        self.assertEqual('Katie', self.customer.customer_name)
+        self.assertEqual('Katie', self.customer.name)
 
 
     def test_customer_has_money(self):
-        self.assertEqual(50.00, self.customer.customer_wallet)
+        self.assertEqual(50.00, self.customer.wallet)
 
 
     def test_customer_age(self):
-        self.assertEqual(28, self.customer.customer_age)
+        self.assertEqual(28, self.customer.age)
 
     def test_customer_bought_drink(self):
-        self.assertEqual(28, self.customer.customer_age)
+        self.assertEqual(28, self.customer.age)
 
     def test_customer_can_buy_drink(self):
         self.customer.buy_drink(self.drink1)
-        self.assertEqual(48.20, self.customer.customer_wallet)
+        self.assertEqual(48.20, self.customer.wallet)
 
 
         # def test_can_pick_up_passenger_from_bus_stop(self):

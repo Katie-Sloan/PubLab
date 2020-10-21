@@ -1,6 +1,7 @@
 import unittest
 from src.pub import Pub
 from src.drinks import Drink
+from src.customer import Customer
 
 class TestPub(unittest.TestCase):
     
@@ -38,6 +39,17 @@ class TestPub(unittest.TestCase):
 
     # MVP test 4
 
-    def test_customer_can_buy_drink(self):
-        pass
+    def test_pub_has_money_from_sale(self):
+        self.pub.add_money_to_till(self.drink1)
+        self.assertEqual(101.80 , self.pub.till)
+
+    def test_pub_can_sell_drink(self):
+        customer1 = Customer("John", 100, 21)
+        drink2 = Drink("Lager", 4.50)
+        self.pub.sell_drink(customer1, drink2)
+        self.assertEqual(95.50, customer1.wallet)
+        self.assertEqual(104.50, self.pub.till)
+    
+
+
     
